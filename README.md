@@ -48,7 +48,7 @@ The `dummy_ectool.c` source file is compiled into a shared library (`libdummy_ec
 
 The `dummy_ectool.py` script imports the shared library with `ctypes.CDLL()` and declares the function signatures for the C functions. It also specifies argument types and return types.
 
-The `fw-fanctrl.py` script loads the `dummy_ectool` module, allowing access to the C functions. The program then:
+The `fw-fanctrl.py` script loads the `dummy_ectool` module, allowing access to the C functions. The program follows through with testing:
 1. Displays the fan status and current speed.
 2. Sets the fan speed to 3000 RPM and displays the new fan status and speed.
 3. Attempts to set the fan speed to 6000 RPM, causing an error due to the correct range being 0-5000 RPM. This step tests the error handling mechanism.
